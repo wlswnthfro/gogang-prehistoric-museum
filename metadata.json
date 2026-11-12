@@ -1,0 +1,6 @@
+{
+  "name": "고강선사유적체험관",
+  "description": "고강선사유적체험관 태블릿 체험 포털 템플릿 - 3D 토기 조각 맞추기, 반달돌칼 게임, 방탈출 게임, 커스텀 활게임 등 선사 유적 인터랙티브 체험 컨테이너",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

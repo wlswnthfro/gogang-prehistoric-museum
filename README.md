@@ -1,11 +1,54 @@
-<div align="center">
+# 고강선사유적 사이트 (고강선사유적체험관)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+부천 고강동 선사유적지를 배경으로 한 어린이·청소년 대상 인터랙티브 선사시대 유적 체험 및 교육 웹 포털입니다.
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## 🎮 주요 체험 게임
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+1. **토기 조각 맞추기 (3D)**
+   - 신석기 시대 대표 유물인 빗살무늬토기 조각을 회전 및 결합하여 완성하는 3D 복원 체험
+2. **벼 수확하기 게임**
+   - 청동기 시대 반달돌칼을 활용하여 황금빛 벼를 수확하는 슬래시 액션 게임
+3. **선사시대 방탈출 게임**
+   - 기원전 1000년 고강동 선사시대 움집 내부를 탐색하고 단서를 찾아 탈출하는 인터랙티브 퍼즐
+4. **커스텀 활게임**
+   - 간돌화살촉과 선사시대 활을 직접 조준하여 바람과 거리를 계산해 과녁을 맞히는 궁술 게임
+5. **진짜유물 가짜 유물 찾기**
+   - 고강선사유적지에서 출토된 유적과 복제품을 관찰하고 판별하는 퀴즈 게임
+6. **고강선사유적 기억 찾기**
+   - 선사시대 도구와 유물 카드를 뒤집어 짝을 맞추는 두뇌 트레이닝 카드 게임
 
-</div>
+---
+
+## 🌿 주요 특징
+
+- **레트로 선사 키즈짱 감성 UI**: 따뜻한 베이지/황토/대지 톤의 비주얼과 선명한 폰트
+- **인터랙티브 생태계**: 하단 풀밭을 아장아장 산책하는 "우가우가 원시인"과 천천히 노니는 3마리 공룡(초록 엄마 공룡, 주황 아기 공룡, 하늘색 꼬마 공룡)
+- **가로 스크롤 캐러셀**: 4개씩 한눈에 들어오는 와이드 카드 뷰와 부드러운 스크롤/터치 전환
+- **반응형 웹 지원**: 데스크톱, 태블릿, 모바일 환경 모두 최적화
+
+---
+
+## 🛠️ 기술 스택
+
+- **Frontend**: React 19, TypeScript, Vite
+- **Styling**: Tailwind CSS v4, NanumSquareRound Font
+- **3D & Graphics**: Three.js (@types/three)
+- **Icons**: Lucide React
+- **Effects**: canvas-confetti
+
+---
+
+## 🚀 실행 방법
+
+```bash
+# 의존성 설치
+npm install
+
+# 로컬 개발 서버 실행 (포트 3000)
+npm run dev
+
+# 프로덕션 빌드
+npm run build
+```

@@ -1,0 +1,468 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #F7F3EB;
+    --bg-surface: #FFFDF9;
+    --border-beige: #DECDB8;
+    --text-primary: #382A1E;
+  }
+
+  body {
+    background-color: #F7F3EB;
+    color: #382A1E;
+    font-family: 'NanumSquareRound', 'Gowun Dodum', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    overflow: hidden;
+  }
+}
+
+.font-round {
+  font-family: 'NanumSquareRound', 'Gowun Dodum', 'Noto Sans KR', sans-serif;
+}
+
+/* Warm Beige Sidebar */
+.beige-sidebar {
+  background: linear-gradient(180deg, #F6EFE3 0%, #EDE2CF 100%);
+  border-right: 2px solid #DECDB8;
+}
+
+/* Menu Item Distinct Box */
+.menu-box {
+  background: #FFFDF9;
+  border: 2px solid #E2D3BE;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(80, 50, 20, 0.04);
+  color: #5C432D;
+  font-family: 'NanumSquareRound', 'Gowun Dodum', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 10px 14px;
+  transition: all 0.16s ease;
+}
+.menu-box:hover {
+  background: #FFFFFF;
+  border-color: #C8AC8A;
+  color: #2F1E0F;
+  transform: translateX(2px);
+}
+
+/* Active Menu Box with Umjip Highlight */
+.menu-box-active {
+  background: linear-gradient(180deg, #FEF08A 0%, #FDE047 100%);
+  border: 2.5px solid #CA8A04;
+  border-radius: 14px;
+  box-shadow: 0 3px 6px rgba(161, 98, 7, 0.18);
+  color: #422006;
+  font-family: 'NanumSquareRound', 'Gowun Dodum', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 10px 14px;
+}
+
+/* Generous Game Card */
+.card-spacious {
+  background: #FFFFFF;
+  border: 3px solid #DFCEB9;
+  border-radius: 20px;
+  box-shadow: 0 4px 0 #C9B59D, 0 8px 14px rgba(70, 50, 30, 0.08);
+  transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.16s ease, border-color 0.16s ease;
+}
+.card-spacious:hover {
+  transform: translateY(-3px);
+  border-color: #B45309;
+  box-shadow: 0 6px 0 #92400E, 0 10px 16px rgba(180, 83, 9, 0.15);
+}
+.card-spacious:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 #92400E, 0 4px 6px rgba(180, 83, 9, 0.12);
+}
+
+/* Game Title Outside Round Capsule (100% visible, clean, rounded, legible) */
+.title-capsule {
+  background: #FFFDF9;
+  border: 2.5px solid #D8C7B2;
+  border-radius: 9999px;
+  box-shadow: 0 3px 6px rgba(70, 50, 20, 0.08);
+  color: #3D2614;
+  font-family: 'NanumSquareRound', 'Gowun Dodum', sans-serif;
+  font-weight: 800;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+}
+.card-spacious:hover ~ .title-capsule,
+.title-capsule:hover {
+  background: #FEF3C7;
+  border-color: #B45309;
+  color: #92400E;
+  transform: translateY(-2px);
+}
+
+/* Horizontal Left-Pointing Speech Bubble */
+.bubble-side-left {
+  position: relative;
+  background: #FFFDF9;
+  border: 2px solid #8C5D36;
+  border-radius: 12px;
+  color: #5C3312;
+  font-family: 'NanumSquareRound', 'Gowun Dodum', sans-serif;
+  font-weight: 800;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+.bubble-side-left::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid #8C5D36;
+}
+.bubble-side-left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid #FFFDF9;
+  z-index: 1;
+}
+
+/* Horizontal Right Speech Bubble (Arrow points left toward Caveman) */
+.bubble-side-right {
+  position: relative;
+  background: #FFFDF9;
+  border: 2px solid #8C5D36;
+  border-radius: 12px;
+  color: #5C3312;
+  font-family: 'NanumSquareRound', 'Gowun Dodum', sans-serif;
+  font-weight: 800;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+.bubble-side-right::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 8px solid #8C5D36;
+}
+.bubble-side-right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right: 6px solid #FFFDF9;
+  z-index: 1;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Floating Vector Clouds Animation */
+@keyframes cloudFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-3px) translateX(4px);
+  }
+}
+.cloud-drift-1 { animation: cloudFloat 6s ease-in-out infinite; }
+.cloud-drift-2 { animation: cloudFloat 8s ease-in-out infinite 1s; }
+.cloud-drift-3 { animation: cloudFloat 7s ease-in-out infinite 2s; }
+.cloud-drift-4 { animation: cloudFloat 9s ease-in-out infinite 3s; }
+.cloud-drift-5 { animation: cloudFloat 7.5s ease-in-out infinite 0.5s; }
+
+/* Wood button for back to lobby */
+.btn-wood {
+  background: linear-gradient(180deg, #B5804C 0%, #8D5C2C 60%, #6E441E 100%);
+  border: 2.5px solid #543415;
+  box-shadow: 
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.4),
+    0 3px 5px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  font-family: 'NanumSquareRound', 'Gowun Dodum', sans-serif;
+  font-weight: 800;
+}
+.btn-wood:hover {
+  filter: brightness(1.06);
+}
+.btn-wood:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-zzang-home {
+  background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
+  border: 2px solid #78350F;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  font-family: 'NanumSquareRound', 'Gowun Dodum', sans-serif;
+}
+
+/* Gentle Dinosaur Idle Bobbing */
+@keyframes dino-idle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3.5px);
+  }
+}
+.animate-dino-1 {
+  animation: dino-idle 3.8s ease-in-out infinite;
+}
+.animate-dino-2 {
+  animation: dino-idle 2.8s ease-in-out infinite 0.6s;
+}
+.animate-dino-3 {
+  animation: dino-idle 3.2s ease-in-out infinite 1.4s;
+}
+
+/* Centered Top Speech Bubble (Pointer points down toward Caveman) */
+.bubble-speech-top {
+  position: relative;
+  background: #FFFDF9;
+  border: 2px solid #8C5D36;
+  border-radius: 12px;
+  color: #5C3312;
+  font-family: 'NanumSquareRound', 'Gowun Dodum', sans-serif;
+  font-weight: 800;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+.bubble-speech-top::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #8C5D36;
+}
+.bubble-speech-top::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFFDF9;
+  z-index: 1;
+}
+
+/* Walking Caveman Patrol Animation (Horizontally pacing back and forth) */
+@keyframes cavemanWalkPatrol {
+  0% {
+    left: 2%;
+  }
+  44% {
+    left: 32%;
+  }
+  50% {
+    left: 32%;
+  }
+  94% {
+    left: 2%;
+  }
+  100% {
+    left: 2%;
+  }
+}
+
+/* Caveman Direction Turn (Faces the direction he walks) */
+@keyframes cavemanDirectionTurn {
+  0%, 46% {
+    transform: scaleX(1);
+  }
+  48%, 96% {
+    transform: scaleX(-1);
+  }
+  98%, 100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Caveman Stepping / Waddling */
+@keyframes cavemanStepWaddle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(3deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-3deg);
+  }
+}
+
+.animate-caveman-patrol {
+  position: absolute;
+  animation: cavemanWalkPatrol 18s ease-in-out infinite;
+  will-change: left;
+}
+
+.animate-caveman-turn {
+  animation: cavemanDirectionTurn 18s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.animate-caveman-step {
+  animation: cavemanStepWaddle 0.75s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* Dinosaurs Roaming Patrol Animations */
+/* 1. Mother Sauropod (Green): slow, peaceful roam */
+@keyframes dinoRoamGreen {
+  0% {
+    left: 24%;
+    transform: scaleX(1);
+  }
+  42% {
+    left: 38%;
+    transform: scaleX(1);
+  }
+  46% {
+    left: 38%;
+    transform: scaleX(-1);
+  }
+  92% {
+    left: 24%;
+    transform: scaleX(-1);
+  }
+  96% {
+    left: 24%;
+    transform: scaleX(1);
+  }
+  100% {
+    left: 24%;
+    transform: scaleX(1);
+  }
+}
+
+/* 2. Baby Sauropod (Amber): playful trot */
+@keyframes dinoRoamAmber {
+  0% {
+    left: 48%;
+    transform: scaleX(1);
+  }
+  42% {
+    left: 62%;
+    transform: scaleX(1);
+  }
+  46% {
+    left: 62%;
+    transform: scaleX(-1);
+  }
+  92% {
+    left: 48%;
+    transform: scaleX(-1);
+  }
+  96% {
+    left: 48%;
+    transform: scaleX(1);
+  }
+  100% {
+    left: 48%;
+    transform: scaleX(1);
+  }
+}
+
+/* 3. Mini Sauropod (Blue): curious peek roam */
+@keyframes dinoRoamBlue {
+  0% {
+    left: 74%;
+    transform: scaleX(1);
+  }
+  42% {
+    left: 88%;
+    transform: scaleX(1);
+  }
+  46% {
+    left: 88%;
+    transform: scaleX(-1);
+  }
+  92% {
+    left: 74%;
+    transform: scaleX(-1);
+  }
+  96% {
+    left: 74%;
+    transform: scaleX(1);
+  }
+  100% {
+    left: 74%;
+    transform: scaleX(1);
+  }
+}
+
+/* Dinosaur Step Sway */
+@keyframes dinoStepSway {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3.5px) rotate(1.2deg);
+  }
+}
+
+.animate-dino-roam-1 {
+  position: absolute;
+  animation: dinoRoamGreen 22s ease-in-out infinite;
+  will-change: left, transform;
+}
+
+.animate-dino-roam-2 {
+  position: absolute;
+  animation: dinoRoamAmber 16s ease-in-out infinite 1s;
+  will-change: left, transform;
+}
+
+.animate-dino-roam-3 {
+  position: absolute;
+  animation: dinoRoamBlue 19s ease-in-out infinite 2s;
+  will-change: left, transform;
+}
+
+.animate-dino-step {
+  animation: dinoStepSway 2.4s ease-in-out infinite;
+  transform-origin: center bottom;
+}
